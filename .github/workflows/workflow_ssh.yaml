@@ -9,14 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Instalar o Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22s
-
-      - name: Listar arquivos
-        run: find . -print
-
       - name: "Deploy via FTP"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

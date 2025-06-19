@@ -4,26 +4,27 @@ on:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: "Copiar arquivos para VPS"
-      uses: actions/scp-action@v0.1.7
-      with:
-        host: "191.252.181.250"
-        username: root
-        password: "Renato@96475870"
-        source: "."
-        target: "/home"
+        uses: actions/scp-action@v0.1.7
+        with:
+          host: "191.252.181.250"
+          username: root
+          password: "Renato@96475870"
+          source: "."
+          target: "/home"
       - name: "Build da aplicação"
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: "191.252.181.250"
-        username: "root"
-        password: "Renato@96475870"
-        script: |
-          cd /home
-          npm install
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: "191.252.181.250"
+          username: "root"
+          password: "Renato@96475870"
+          script: |
+            cd /home
+            npm install
           
         

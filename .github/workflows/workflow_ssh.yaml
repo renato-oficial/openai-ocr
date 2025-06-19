@@ -20,7 +20,7 @@ jobs:
           password: "Renato@96475870"
           port: 22
           source: "./"
-          target: "/home/deployuser/s"
+          target: "/home/deployuser/"
           overwrite: true
 
       - name: Execute remote command

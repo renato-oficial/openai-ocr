@@ -18,7 +18,7 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./
-          server-dir: /home
+          server-dir: /home/
           exclude: |
             **/node_modules/**
             **/package-lock.json

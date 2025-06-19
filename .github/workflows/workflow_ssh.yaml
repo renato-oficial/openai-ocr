@@ -24,7 +24,6 @@ jobs:
           username: "root"
           password: "Renato@96475870"
           script: |
-            export PATH=$PATH:/usr/local/bin
             cd /home
             npm install
           

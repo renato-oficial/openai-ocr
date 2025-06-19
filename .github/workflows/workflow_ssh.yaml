@@ -21,8 +21,6 @@ jobs:
           port: 22
           source: "./"
           target: "/var/www/my-app"
-          rm: true  # Remove arquivos temporários após o envio
-          strip_components: 1  # Remove a pasta raiz ao extrair
           overwrite: true
 
       - name: Execute remote command

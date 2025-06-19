@@ -14,11 +14,6 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
-
-        
-      - Listar arquivos
-      run: find . -print
-
       - name: "Build da aplicação node"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

@@ -16,6 +16,6 @@ jobs:
         username: deployuser
         password: "Renato@96475870"
         source: ./
-        target: /home/
+        target: /home/deployuser/
           
         

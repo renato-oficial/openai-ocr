@@ -1,0 +1,22 @@
+name: Node.js CI
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # Checkout the repository
+      - name: Use Node.js 
+        uses: actions/setup-node@v3 # Set up Node.js
+        with:
+          node-version: 22. # Set the Node.js version
+      - name: Install dependencies
+        run: npm install
+      - name: run install, build and start
+        run: npm start
+        # run: |
+        #   npm install
+        #   npm run build
+        #   npm run test
+        

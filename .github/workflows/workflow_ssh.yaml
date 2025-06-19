@@ -14,6 +14,11 @@ jobs:
         with:
           node-version: 22
           cache: "npm"
+
+        
+      - nameListar arquivos
+      run: find . -print
+
       - name: "Build da aplicação node"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -21,10 +26,10 @@ jobs:
           username: "root"
           password: "Renato@96475870"
           local_dir: "."
-          remote_dir: "/root/home"
+          remote_dir: "/home"
           delete: true
           clean: true
-          exclude: "node_modules"
-          exclude: "package-lock.json"
+        exclude: "node_modules,package-lock.json"
+
           
         

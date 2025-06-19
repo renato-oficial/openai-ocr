@@ -17,8 +17,8 @@ jobs:
           password: "Renato@96475870"
           source: "."
           target: "/home"
-          
-      - name: "Build da aplicação"
+
+      - name: "Build da aplicação node"
         uses: appleboy/ssh-action@v0.1.3
         with:
           host: "191.252.181.250"

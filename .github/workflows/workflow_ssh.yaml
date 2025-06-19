@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: "Deploy via FTP"
+      - name: "Deploy via FTP on VPS"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 191.252.181.250

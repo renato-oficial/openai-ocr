@@ -9,14 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Deploy with SSH
         uses: easingthemes/ssh-deploy@v5.0.3
         env:
-          password: "Renato@96475870"s
-          SOURCE: "./" #Or your build output directory
+          password: "Renato@96475870"
+          SOURCE: "./"
           TARGET: "/var/www/my-app"
           REMOTE_HOST: 191.252.181.250
           REMOTE_USER: deployuser

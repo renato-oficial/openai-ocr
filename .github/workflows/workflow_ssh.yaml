@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     steps:
     - name: Upload via SCP
       uses: appleboy/scp-action@v0.1.3

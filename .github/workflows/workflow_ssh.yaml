@@ -16,7 +16,7 @@ jobs:
           username: "root"
           password: "Renato@96475870"
           source: "."
-          target: "/home"
+          target: "/root/home"
 
       - name: "Build da aplicação node"
         uses: appleboy/ssh-action@v0.1.3
@@ -25,7 +25,7 @@ jobs:
           username: "root"
           password: "Renato@96475870"
           script: |
-            cd /home
+            cd /root/home
             ls -la
             npm install
           

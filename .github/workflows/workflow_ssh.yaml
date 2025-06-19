@@ -24,7 +24,7 @@ jobs:
           username: "root"
           password: "Renato@96475870"
           script: |
-            cd /home
+            cd /home/github-openai
             npm install
           
         

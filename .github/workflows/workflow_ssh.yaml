@@ -17,7 +17,7 @@ jobs:
           password: "Renato@96475870"
           protocol: ftp
           port: 21
-          local-dir: .
+          local-dir: ./
           server-dir: /home
           exclude: |
             **/node_modules/**

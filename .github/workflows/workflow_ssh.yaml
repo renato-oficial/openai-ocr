@@ -13,16 +13,16 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy with SSH
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/scp-action@v0.1.3s
         env:
+          host: "191.252.181.250"
+          username: root
           password: "Renato@96475870"
           SOURCE: "./"
           TARGET: "/var/www/my-app"
-          REMOTE_HOST: 191.252.181.250
-          REMOTE_USER: deployuser
+          
           # Optional: Add port if not 22
           # REMOTE_PORT: 2222
-          ARGS: "-rltgoDzvO --delete" # Example rsync arguments
 
       - name: Execute remote command
         uses: appleboy/ssh-action@v1.0.3

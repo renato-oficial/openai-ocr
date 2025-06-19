@@ -9,14 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Upload via SCP
-       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: 191.252.181.250
-          username: deployuser
-          password: "Renato@96475870"
-          protocol: ftp
-          port: 21
-          local-dir: ./
-          server-dir: /home/deployuser/          
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: 191.252.181.250
+        username: deployuser
+        password: "Renato@96475870"
+        protocol: ftp
+        port: 21
+        local-dir: ./
+        server-dir: /home/deployuser/
+        exclude: |
+        **/node_modules/**
+        **/package-lock.json
         

@@ -12,11 +12,11 @@ jobs:
       - name: "Deploy via FTP"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          password: ${{ secrets.VPS_PASS }}
+          host: "191.252.181.250"
+          username: root
+          password: "Renato@96475870"
           local_dir: "."
-          remote_dir: "/root/home"
+          remote_dir: "/home"
           delete: true
           clean: true
           exclude: "node_modules,package-lock.json"

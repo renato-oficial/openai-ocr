@@ -20,7 +20,7 @@ jobs:
           password: "Renato@96475870"
           port: 22
           source: "./"
-          target: "/var/www/my-app"
+          target: "/home/deployuser/s"
           overwrite: true
 
       - name: Execute remote command
@@ -31,6 +31,6 @@ jobs:
           password: "Renato@96475870"
           port: 22
           script: |
-            cd /var/www/my-app
+            cd /home/deployuser/
             ls -la
             npm install

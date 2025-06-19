@@ -20,6 +20,6 @@ jobs:
         local-dir: ./
         server-dir: /home/deployuser/
         exclude: |
-        **/node_modules/**
-        **/package-lock.json
+          **/node_modules/**
+          **/package-lock.json
         

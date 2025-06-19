@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Copiar arquivos para VPS"
-        uses: actions/scp-action@v0.1.7
+        uses: appleboy/scp-action@v0.1.3
         with:
           host: "191.252.181.250"
           username: root
@@ -18,7 +18,7 @@ jobs:
           source: "."
           target: "/home"
       - name: "Build da aplicação"
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v0.1.3
         with:
           host: "191.252.181.250"
           username: "root"

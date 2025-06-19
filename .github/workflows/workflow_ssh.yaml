@@ -15,21 +15,20 @@ jobs:
           node-version: 22
           cache: "npm"
 
-        
-      - nameListar arquivos
-      run: find . -print
+      - name: Listar arquivos
+        run: find . -print
 
-      - name: "Build da aplicação node"
+      - name: "Deploy via FTP"
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          host: "191.252.181.250"
-          username: "root"
-          password: "Renato@96475870"
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASS }}
           local_dir: "."
-          remote_dir: "/home"
+          remote_dir: "/root/home"
           delete: true
           clean: true
-        exclude: "node_modules,package-lock.json"
+          exclude: "node_modules,package-lock.json"
 
           
         

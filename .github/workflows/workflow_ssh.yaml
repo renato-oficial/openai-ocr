@@ -13,7 +13,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 191.252.181.250
-          username: root
+          username: deployuser
           password: "Renato@96475870"
           protocol: ftp
           port: 21

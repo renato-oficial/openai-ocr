@@ -25,6 +25,7 @@ jobs:
           password: "Renato@96475870"
           script: |
             cd /home
+            ls -la
             npm install
           
         
